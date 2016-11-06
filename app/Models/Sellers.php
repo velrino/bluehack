@@ -17,9 +17,7 @@ class Sellers extends Eloquent
     $validator = Validator::make(
       $inputs,
     [
-      'name'   => 'required|string',
-      'email' => 'required|string|unique:Sellers,email',
-      'password' => 'required|string'
+      'name'        => 'required|string',
     ], ValidatorModel::$validatorMessage );
 
 

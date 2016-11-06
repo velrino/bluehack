@@ -17,8 +17,9 @@ class Products extends Eloquent
     $validator = Validator::make(
       $inputs,
     [
-      'seller_id'   => 'required|string|exists:Sellers,_id',
-      'plan'        => 'required|string',
+      #'seller_id'   => 'required|string|exists:Sellers,_id',
+      #'plan'        => 'required|string',
+      'name'        => 'required|string',
     ], ValidatorModel::$validatorMessage );
 
 

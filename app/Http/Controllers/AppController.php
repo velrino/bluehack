@@ -78,6 +78,7 @@ class AppController extends Controller
     {
       $validate = $this->Products->validateNewProduct($Request->input());
       if(isset($validate["code"])) return response( ['errors' => $validate['errors']] , $validate["code"]);
+      $this->Products->create( $Request->input() );
       return ['result' => 'success'];
     }
 }
